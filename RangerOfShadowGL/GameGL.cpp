@@ -1,6 +1,7 @@
 #include "GameGL.h"
 CPlayer player;
-Map cMap;
+vector<CCharacter*> Mobs;
+CRat *cRat = new CRat();
 GameGL::GameGL(void)
 {
 }
@@ -9,9 +10,19 @@ GameGL::GameGL(int argc, char **argv)
 {
 	m_Ctrl = new CControl();
 	glutInit(&argc, argv);
-	player.setPosX(0);
-	player.setPosY(15);
-	player.setLook('l');
+	player.setPosX(startX);
+	player.setPosY(startY);
+	player.setLook('@');
+	CRat *cRat = new CRat();
+	cRat->setLook('r');
+	cRat->setPosX(180);
+	cRat->setPosY(195);
+	CRat *cRat2 = new CRat();
+	cRat2->setLook('r');
+	cRat2->setPosX(36);
+	cRat2->setPosY(105);
+	Mobs.push_back(cRat);
+	Mobs.push_back(cRat2);
 	cMap.Init();
 }
 
@@ -33,8 +44,12 @@ void GameGL::Display()
 	glClearColor(0, 0, 0, 1.0);
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 	glColor3f(1,1,1);
-	player.showLook(player.getPosX(), Height-player.getPosY(), (int*)GLUT_BITMAP_9_BY_15);
-	cMap.paintMap(0, Height - 15, (int*)GLUT_BITMAP_9_BY_15);
+	player.showLook(startX, Height-startY);
+	glColor3f(1,1,0);
+	for(int i = 0; i < Mobs.size(); ++i)
+		Mobs[i]->showLook(Mobs[i]->getPosX(), Height - Mobs[i]->getPosY());
+	glColor3f(1,1,1);
+	cMap.paintMap(startX - player.getPosX(), Height - startY + player.getPosY() - 15);
 	glutSwapBuffers();
 }
 
@@ -50,4 +65,6 @@ void GameGL::Reshape(GLint w, GLint h)
 }
 GameGL::~GameGL(void)
 {
+	player.~CPlayer();
+	cMap.~Map();
 }

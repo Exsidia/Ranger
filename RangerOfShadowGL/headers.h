@@ -3,7 +3,7 @@
 #include <string>
 #include <iostream>
 #include <stdlib.h>
-#include <glut.h>
+#include <gl\glut.h>
 #include <gl\GL.h>
 #include <vector>
 #include <cmath>
@@ -13,3 +13,5 @@ extern GLint Height;
 extern GLint Width;
 const int stepX = 9;
 const int stepY = 15;
+const int startX = 306;
+const int startY = 150;

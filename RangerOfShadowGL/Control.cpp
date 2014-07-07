@@ -25,6 +25,8 @@ void CControl::SpecKeyboard(int key, int x, int y)
 		temp->~CPlayer();
 		glutPostRedisplay();
 	}
+	cout << player.getPosX() << endl;
+	cout << player.getPosY() << endl;
 }
 
 CControl::~CControl(void)
