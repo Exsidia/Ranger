@@ -27,6 +27,8 @@ void CControl::SpecKeyboard(int key, int x, int y)
 	}
 	cout << player.getPosX() << endl;
 	cout << player.getPosY() << endl;
+	cout << Mobs[0]->getPosX() - startX << endl;
+	cout << Mobs[0]->getPosY() - startY<< endl;
 }
 
 CControl::~CControl(void)

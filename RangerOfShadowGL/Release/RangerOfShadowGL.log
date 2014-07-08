@@ -1,22 +1,24 @@
-﻿Построение начато 7/6/2014 4:37:11 PM.
-     1>Проект "C:\Users\Klops\Documents\Visual Studio 2012\Projects\RangerOfShadowGL\RangerOfShadowGL\RangerOfShadowGL.vcxproj" в узле 2 (целевые объекты Build).
+﻿Построение начато 7/7/2014 3:49:19 PM.
+     1>Проект "C:\Users\Wisest\Documents\Visual Studio 2012\Projects\RangerOfShadowGL\RangerOfShadowGL\RangerOfShadowGL.vcxproj" в узле 2 (целевые объекты Build).
      1>ClCompile:
-         E:\Program Files\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc110.pdb" /FR"Release\\" /Gd /TP /analyze- /errorReport:prompt GameGL.cpp
-         GameGL.cpp
-     1>GameGL.cpp(49): warning C4018: <: несоответствие типов со знаком и без знака
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc110.pdb" /FR"Release\\" /Gd /TP /analyze- /errorReport:prompt Object.cpp
+         Object.cpp
+     1>Object.cpp(20): warning C4018: <: несоответствие типов со знаком и без знака
+     1>Object.cpp(30): warning C4018: <: несоответствие типов со знаком и без знака
        Link:
-         E:\Program Files\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Klops\Documents\Visual Studio 2012\Projects\RangerOfShadowGL\Release\RangerOfShadowGL.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Klops\Documents\Visual Studio 2012\Projects\RangerOfShadowGL\Release\RangerOfShadowGL.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Klops\Documents\Visual Studio 2012\Projects\RangerOfShadowGL\Release\RangerOfShadowGL.lib" /MACHINE:X86 /SAFESEH /SAFESEH:no Release\Control.obj
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Wisest\Documents\Visual Studio 2012\Projects\RangerOfShadowGL\Release\RangerOfShadowGL.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Wisest\Documents\Visual Studio 2012\Projects\RangerOfShadowGL\Release\RangerOfShadowGL.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Wisest\Documents\Visual Studio 2012\Projects\RangerOfShadowGL\Release\RangerOfShadowGL.lib" /MACHINE:X86 /SAFESEH /SAFESEH:no Release\AIBehavior.obj
+         Release\Control.obj
          Release\GameGL.obj
          Release\main.obj
          Release\Map.obj
          Release\Object.obj
          Создание кода
          Создание кода завершено
-         RangerOfShadowGL.vcxproj -> C:\Users\Klops\Documents\Visual Studio 2012\Projects\RangerOfShadowGL\Release\RangerOfShadowGL.exe
+         RangerOfShadowGL.vcxproj -> C:\Users\Wisest\Documents\Visual Studio 2012\Projects\RangerOfShadowGL\Release\RangerOfShadowGL.exe
        BscMake:
-         E:\Program Files\Microsoft Visual Studio 11.0\VC\bin\bscmake.exe /nologo /o"C:\Users\Klops\Documents\Visual Studio 2012\Projects\RangerOfShadowGL\Release\RangerOfShadowGL.bsc" /n Release\Control.sbr Release\GameGL.sbr Release\main.sbr Release\Map.sbr Release\Object.sbr
-     1>Построение проекта "C:\Users\Klops\Documents\Visual Studio 2012\Projects\RangerOfShadowGL\RangerOfShadowGL\RangerOfShadowGL.vcxproj" завершено (целевые объекты Build).
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\bscmake.exe /nologo /o"C:\Users\Wisest\Documents\Visual Studio 2012\Projects\RangerOfShadowGL\Release\RangerOfShadowGL.bsc" /n Release\AIBehavior.sbr Release\Control.sbr Release\GameGL.sbr Release\main.sbr Release\Map.sbr Release\Object.sbr
+     1>Построение проекта "C:\Users\Wisest\Documents\Visual Studio 2012\Projects\RangerOfShadowGL\RangerOfShadowGL\RangerOfShadowGL.vcxproj" завершено (целевые объекты Build).
 
 Построение успешно завершено.
 
-Затраченное время: 00:00:04.48
+Затраченное время: 00:00:05.19

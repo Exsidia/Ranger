@@ -81,6 +81,7 @@
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="AIBehavior.cpp" />
     <ClCompile Include="Control.cpp" />
     <ClCompile Include="GameGL.cpp" />
     <ClCompile Include="main.cpp" />
@@ -88,11 +89,15 @@
     <ClCompile Include="Object.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AIBehavior.h" />
     <ClInclude Include="Control.h" />
     <ClInclude Include="GameGL.h" />
     <ClInclude Include="headers.h" />
     <ClInclude Include="Map.h" />
     <ClInclude Include="Object.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="map.data" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

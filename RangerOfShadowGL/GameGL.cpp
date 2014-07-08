@@ -1,7 +1,7 @@
 #include "GameGL.h"
 CPlayer player;
 vector<CCharacter*> Mobs;
-CRat *cRat = new CRat();
+//CRat *cRat = new CRat();
 GameGL::GameGL(void)
 {
 }
@@ -13,14 +13,19 @@ GameGL::GameGL(int argc, char **argv)
 	player.setPosX(startX);
 	player.setPosY(startY);
 	player.setLook('@');
-	CRat *cRat = new CRat();
-	cRat->setLook('r');
-	cRat->setPosX(180);
-	cRat->setPosY(195);
-	CRat *cRat2 = new CRat();
-	cRat2->setLook('r');
-	cRat2->setPosX(36);
-	cRat2->setPosY(105);
+	CRat *cRat = new CRat('r', 306, 135);
+	CSimpleAI *sAI = new CSimpleAI();
+	//cRat->setLook('r');
+	cRat->setAI(sAI);
+	//cRat->setPosX(180);
+	//cRat->setPosY(195);
+	CRat *cRat2 = new CRat('r', 9, 30);
+//	cRat2->setLook('r');
+	//cRat2->setPosX(9);
+//	cRat2->setPosY(105);
+	cRat2->setAI(sAI);
+	CWeaponBehavior *cClaw = new CClawWeapon();
+	cRat2->setWeapon(cClaw);
 	Mobs.push_back(cRat);
 	Mobs.push_back(cRat2);
 	cMap.Init();

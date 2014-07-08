@@ -3,11 +3,12 @@
 #include <string>
 #include <iostream>
 #include <stdlib.h>
-#include <gl\glut.h>
+#include <glut.h>
 #include <gl\GL.h>
 #include <vector>
 #include <cmath>
 #include <Windows.h>
+#include <stdlib.h>
 using namespace std;
 extern GLint Height;
 extern GLint Width;
