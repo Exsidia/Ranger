@@ -8,27 +8,9 @@ GameGL::GameGL(void)
 
 GameGL::GameGL(int argc, char **argv)
 {
-	m_Ctrl = new CControl();
+	//m_Ctrl = new CControl();
+	menu = new CMenu();
 	glutInit(&argc, argv);
-	player.setPosX(startX);
-	player.setPosY(startY);
-	player.setLook('@');
-	CRat *cRat = new CRat('r', 306, 135);
-	CSimpleAI *sAI = new CSimpleAI();
-	//cRat->setLook('r');
-	cRat->setAI(sAI);
-	//cRat->setPosX(180);
-	//cRat->setPosY(195);
-	CRat *cRat2 = new CRat('r', 9, 30);
-//	cRat2->setLook('r');
-	//cRat2->setPosX(9);
-//	cRat2->setPosY(105);
-	cRat2->setAI(sAI);
-	CWeaponBehavior *cClaw = new CClawWeapon();
-	cRat2->setWeapon(cClaw);
-	Mobs.push_back(cRat);
-	Mobs.push_back(cRat2);
-	cMap.Init();
 }
 
 void GameGL::Initialize(GLint w, GLint h)
@@ -37,25 +19,11 @@ void GameGL::Initialize(GLint w, GLint h)
 	glutInitWindowSize(w, h);
 	glutInitWindowPosition(400, 200);
 	glutCreateWindow("Ranger of Shadows");
-	glutDisplayFunc(Display);
+	glutDisplayFunc(menu->Display);
 	glutReshapeFunc(Reshape);
-	glutKeyboardFunc(m_Ctrl->Keyboard);
-	glutSpecialFunc(m_Ctrl->SpecKeyboard);
+	glutKeyboardFunc(menu->Keyboard);
+	glutSpecialFunc(menu->SpecKeyboard);
 	glutMainLoop();
-}
-
-void GameGL::Display()
-{
-	glClearColor(0, 0, 0, 1.0);
-	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-	glColor3f(1,1,1);
-	player.showLook(startX, Height-startY);
-	glColor3f(1,1,0);
-	for(int i = 0; i < Mobs.size(); ++i)
-		Mobs[i]->showLook(Mobs[i]->getPosX(), Height - Mobs[i]->getPosY());
-	glColor3f(1,1,1);
-	cMap.paintMap(startX - player.getPosX(), Height - startY + player.getPosY() - 15);
-	glutSwapBuffers();
 }
 
 void GameGL::Reshape(GLint w, GLint h)
@@ -71,5 +39,7 @@ void GameGL::Reshape(GLint w, GLint h)
 GameGL::~GameGL(void)
 {
 	player.~CPlayer();
+	for(int i = 0; i < Mobs.size(); ++i)
+		delete Mobs[i];
 	cMap.~Map();
 }

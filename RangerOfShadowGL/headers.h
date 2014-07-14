@@ -8,7 +8,6 @@
 #include <vector>
 #include <cmath>
 #include <Windows.h>
-#include <stdlib.h>
 using namespace std;
 extern GLint Height;
 extern GLint Width;

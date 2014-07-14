@@ -4,6 +4,7 @@ class GameGL
 {
 private:
 	CControl *m_Ctrl;
+	CMenu *menu;
 public:
 	GameGL(void);
 	GameGL(int argc, char **argv);
